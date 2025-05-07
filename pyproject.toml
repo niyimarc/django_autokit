@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "django-autokit"
-version = "0.1.0"
+name = "django_autokit"
+version = "0.2.0"
 description = "A CLI tool to automate Django project setup, including settings splitting, .env creation, and app boilerplate."
 readme = "README.md"
 requires-python = ">=3.7"
@@ -29,6 +29,5 @@ dependencies = [
 Homepage = "http://github.com/niyimarc/django_autokit"
 Issues = "http://github.com/niyimarc/django_autokit/issues"
 
-[tool.setuptools]
-packages = ["django_autokit"]
-include-package-data = true
+[project.scripts]
+djkit = "django_autokit.cli:main"

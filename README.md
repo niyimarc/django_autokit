@@ -78,6 +78,15 @@ This will:
 
 ---
 
+### 4️⃣ Gitignore Generator
+
+To generate a Django-friendly `.gitignore` file:
+
+```bash
+djkit gitignore
+```
+
+
 ## ⚙️ Environment Management
 
 Your `.env` file will look like this:
@@ -127,3 +136,6 @@ This project is licensed under the MIT License – see the [LICENSE](./LICENSE) 
 ## 🤝 Contributing
 
 Pull requests are welcome! If you find a bug or have a feature request, feel free to [open an issue](https://github.com/niyimarc/django_autokit/issues).
+
+See full [Changelog](https://github.com/niyimarc/django_autokit/blob/master/CHANGELOG.md).
+
