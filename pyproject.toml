@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django_autokit"
-version = "0.2.0"
+version = "0.2.1"
 description = "A CLI tool to automate Django project setup, including settings splitting, .env creation, and app boilerplate."
 readme = "README.md"
 requires-python = ">=3.7"

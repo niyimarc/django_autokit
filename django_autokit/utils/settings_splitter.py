@@ -41,8 +41,25 @@ def split_settings():
     base_path = os.path.join(settings_folder, "base.py")
     with open(original_backup_path, "r") as original_file:
         content = original_file.read()
+    # Adjust BASE_DIR to go one directory higher if it exists
+    adjusted = False
+    if "BASE_DIR = Path(__file__).resolve().parent.parent" in content:
+        content = content.replace(
+            "BASE_DIR = Path(__file__).resolve().parent.parent",
+            "BASE_DIR = Path(__file__).resolve().parent.parent.parent"
+        )
+        adjusted = True
+    else:
+        print("⚠️  Could not auto-adjust BASE_DIR. Please update it manually if needed.")
+
     with open(base_path, "w") as base_file:
         base_file.write(content)
+
+    if adjusted:
+        print("✅ Created base.py with adjusted BASE_DIR path")
+    else:
+        print("✅ Created base.py without BASE_DIR adjustment (not found in original)")
+
 
     print(f"✅ Created base.py with the original settings content")
 
